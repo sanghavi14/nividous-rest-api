@@ -17,6 +17,13 @@ export default function handler(req, res) {
             dueDate: "N/A",
             type: "Auto"
         });
+    } else if (loanNumber === "301") {
+        res.status(200).json({
+            status: "Paid",
+            balance: 0,
+            dueDate: "N/A",
+            type: "Auto"
+        });
     } else {
         res.status(404).json({
             error: "Loan not found",
