@@ -6,7 +6,7 @@ export default function handler(req, res) {
     // Get loanNumber from query string (e.g., ?loanNumber=123)
     const { loanNumber } = req.query;
 
-    if (loanNumber === "101") {
+    if (loanNumber === "1010") {
         res.status(200).json({
             status: "Active",
             balance: 5000,
