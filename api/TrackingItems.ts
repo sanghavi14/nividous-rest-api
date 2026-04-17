@@ -1,7 +1,7 @@
 
 export default function handler(req, res) {   
   
-  export const tiRecords = [
+  const tiRecords = [
     { id: "t1", loan_number: "0100578962", ti_name: "Funding Rework", ti_status: "Initiated", prior_to: "Funded-Funds Disbured", due_date: "01-01-2026", has_exception: "no" },
     { id: "t2", loan_number: "0100578972", ti_name: "Funding Rework", ti_status: "Requested", prior_to: "Funded-Funds Disbured", due_date: "17-01-2026", has_exception: "yes" },
     { id: "t3", loan_number: "0100578982", ti_name: "Funding Rework", ti_status: "Requested", prior_to: "Funded-Funds Disbured", due_date: "07-01-2026", has_exception: "no" },
