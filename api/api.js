@@ -1,9 +1,4 @@
 // api/loan.js
-// import axios from "axios";
-// import csv from "csvtojson";
-const fs = require("fs");
-const path = require("path");
-
 export default function handler(req, res) {
     // Get loanNumber from query string (e.g., ?loanNumber=123)
     const { loanNumber } = req.query;
@@ -39,23 +34,4 @@ export default function handler(req, res) {
             message: "Please check the loan number and try again."
         });
     }
-}
-
-function readCsvAsJson() {
-  const filePath = path.join("", "LoanInformationData.csv");
-  const csvData = fs.readFileSync(filePath, "utf-8");
-
-  const lines = csvData.trim().split("\n");
-  const headers = lines[0].split(",");
-
-  const records = lines.slice(1).map(line => {
-    const values = line.split(",");
-    const record = {};
-    headers.forEach((header, index) => {
-      record[header.trim()] = values[index]?.trim();
-    });
-    return record;
-  });
-
-  return records;
 }
