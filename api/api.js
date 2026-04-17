@@ -1,6 +1,8 @@
 // api/loan.js
 // import axios from "axios";
 // import csv from "csvtojson";
+const fs = require("fs");
+const path = require("path");
 
 export default function handler(req, res) {
     // Get loanNumber from query string (e.g., ?loanNumber=123)
@@ -40,7 +42,7 @@ export default function handler(req, res) {
 }
 
 function readCsvAsJson() {
-  const filePath = path.join("", "LoanInformationData.csv"); // same folder as index.js
+  const filePath = path.join("", "LoanInformationData.csv");
   const csvData = fs.readFileSync(filePath, "utf-8");
 
   const lines = csvData.trim().split("\n");
