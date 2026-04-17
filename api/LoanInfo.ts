@@ -1,6 +1,6 @@
 export default function handler(req, res) {   
 
-          export const loans = [
+          const loans = [
             {
               id: "L1",
               loan_number: "0100578962",
