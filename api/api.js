@@ -7,16 +7,16 @@ export default function handler(req, res) {
     const { loanNumber } = req.query;
 
     if (loanNumber === "99") {
+        res.status(200).json(readCsvAsJson());
+    }
+    
+    if (loanNumber === "101") {
         res.status(200).json({
             status: "Active",
             balance: 5000,
             dueDate: "2026-05-15",
             type: "Personal"
         });
-    }
-    
-    if (loanNumber === "1010") {
-        res.status(200).json(readCsvAsJson());
     } else if (loanNumber === "202") {
         res.status(200).json({
             status: "Paid",
