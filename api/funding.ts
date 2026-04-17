@@ -53,8 +53,9 @@ const loans = [
             first_payment_date: "2026-03-01"
           }
         ];
-        
-        const loanNumber = req.params.loanNumber;
+
+           const { loanNumber } = req.query;
+        //const loanNumber = req.params.loanNumber;
         
         const loan = loans.find(l => l.loan_number === loanNumber);
         
