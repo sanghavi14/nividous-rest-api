@@ -1,7 +1,7 @@
 import axios from "axios";
 import csv from "csvtojson";
 
-export async function getLoanInfoCsvAsJson(): Promise<any[]> {
+export default function handler(req, res) {
   try {     
     const csvUrl = "LoanInformationData.csv";
 
