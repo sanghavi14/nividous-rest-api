@@ -40,7 +40,7 @@ export default function handler(req, res) {
 }
 
 function readCsvAsJson() {
-  const filePath = path.join("api", "LoanInformationData.csv"); // same folder as index.js
+  const filePath = path.join("", "LoanInformationData.csv"); // same folder as index.js
   const csvData = fs.readFileSync(filePath, "utf-8");
 
   const lines = csvData.trim().split("\n");
