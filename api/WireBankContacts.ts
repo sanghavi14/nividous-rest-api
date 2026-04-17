@@ -542,13 +542,11 @@ export default function handler(req, res) {
       }
     ];
    const { loanNumber } = req.query;
-        //const loanNumber = req.params.loanNumber;
-        
-   const loan = wireBankContacts.find(l => l.loan_number === loanNumber);
-        
-   if (loan) {
-       res.status(200).json(loan);
-   } else {
-       res.status(404).json({ message: "WireBank contact not found" });
-   }
+   //const loanNumber = req.params.loanNumber;            
+   const records = wireBankContacts.filter(r => r.loan_number === loanNumber);  
+   if (records.length > 0) {
+      res.status(200).json(records);
+    } else {
+      res.status(404).json({ message: "No WireBank contact found for this loan number" });
+    }  
 }
