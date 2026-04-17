@@ -14,7 +14,7 @@ export default function handler(req, res) {
         }); */
   
     
-    const csvFilePath = path.resolve(__dirname, 'data.csv');
+    const csvFilePath = path.resolve(__dirname, 'LoanInformationData.csv');
     const fileContent = fs.readFileSync(csvFilePath, { encoding: 'utf-8' });
     parse(fileContent, { delimiter: ',' }, (err, records) => {
       res.status(200).json({records});
