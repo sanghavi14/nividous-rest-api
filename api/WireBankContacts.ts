@@ -1,10 +1,9 @@
 import data,{setWbcData,getWireBankContacts} from "./data.js";
 
 export default function handler(req, res) {       
-   const { loanNumber,operation, addressType,name,city} = req.query;
-    
-   if(operation == "set"){
-        setWbcData(loanNumber, addressType,name,city);        
+   const { loanNumber,operation, addressType,name,city,state,abaNum,acctNum,zipPlus,acctName, shortName} = req.query;   
+   if(operation == "set"){      
+        setWbcData(loanNumber, addressType,name,city,state, shortName, abaNum, acctNum, zipPlus, acctName);        
    }   
    const records = getWireBankContacts(loanNumber);
    if (records.length > 0) {
