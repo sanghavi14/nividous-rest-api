@@ -62,7 +62,7 @@ export function setTiData(loanNumber,tiNames){
 
 export function getTrackingItemsData(loanNumber){
     const records = tiRecords.filter(r => r.loan_number === loanNumber);      
-    return tiRecords;
+    return records ;
 }
 
 export default data;
