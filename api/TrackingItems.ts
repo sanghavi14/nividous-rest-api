@@ -64,12 +64,13 @@ export default function handler(req, res) {
           }  
         } */    
       }
-    
+   
       //const records = tiRecords.filter(r => r.loan_number === loanNumber);  
-      //if (records.length > 0) {
-       // res.status(200).json(records);
-      //} else {
-        //res.status(404).json({ message: "No records found for this loan number" });
-      //} 
+     const records = getTrackingItemsData(loanNumber);
+      if (records.length > 0) {
+        res.status(200).json(records);
+      } else {
+        res.status(404).json({ message: "No records found for this loan number" });
+      } 
    // }
 }
