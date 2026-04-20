@@ -7,4 +7,9 @@ export function getLoanInfo(loanNumber){
     return data[loanNumber];
 }
 
+export function setLoanInfo(loanNumber,loanInfo){
+    data[loanNumber] = loanInfo;
+    return data;
+}
+
 export default data;
