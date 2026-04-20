@@ -35,12 +35,24 @@ export default function handler(req, res) {
     { id: "t29", loan_number: "0100578919", ti_name: "Payoff Shortage", ti_status: "In Process", prior_to: "Funded-Funds Disbured", due_date: "17-02-2026", has_exception: "yes" }
   ];
   
-  const { loanNumber } = req.query;  
+  //const { loanNumber } = req.query;  
   // Get all records for this loan
-  const records = tiRecords.filter(r => r.loan_number === loanNumber);  
+  /*const records = tiRecords.filter(r => r.loan_number === loanNumber);  
   if (records.length > 0) {
     res.status(200).json(records);
   } else {
     res.status(404).json({ message: "No records found for this loan number" });
+  }*/
+
+  const { loanNumber,operation,tiInfo } = req.query;
+  if(!loanNumber || !operation)
+      return error;
+  else if(operation == "set" && !loanInfo)
+      return error;
+  else{
+      if(operation == "set"){
+          setLoanInfo(loanNumber,JSON.parse(loanInfo));
+      }
+      res.status(200).json(getLoanInfo(loanNumber));
   }
 }
