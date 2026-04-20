@@ -1,8 +1,13 @@
+import data,{getLoanInfo} from "./data.js";
 // api/loan.js
 export default function handler(req, res) {
     // Get loanNumber from query string (e.g., ?loanNumber=123)
     const { loanNumber } = req.query;
 
+    if (loanNumber === "1020304050") {
+        res.status(200).json(getLoanInfo(loanNumber));
+    }
+    
     if (loanNumber === "99") {
         res.status(200).json(readCsvAsJson());
     }
