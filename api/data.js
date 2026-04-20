@@ -612,12 +612,20 @@ export function getWireBankContacts(loanNumber){
     return records ;
 }
 
-export function setWbcData(loanNumber,wbcAddressType, wbcName, wbcCity){
+export function setWbcData(loanNumber,wbcAddressType, wbcName, wbcCity, state, shortName, abaNum, acctNum, zipPlus, acctName){
+   
     const wireBanksData = getWireBankContacts(loanNumber);
     for (const wbRecord of wireBanksData) {                  
             if (wbRecord.loan_number === loanNumber && wbRecord.address_type === wbcAddressType) {
               wbRecord.name = wbcName;  
               wbRecord.city = wbcCity;  
+              wbRecord.state = state;
+              wbRecord.short_name = shortName;
+              wbRecord.aba_num = abaNum;
+              wbRecord.account_num = acctNum;
+              wbRecord.zip_plus = zipPlus;
+              wbRecord.account_name = acctName;
+                
               break;          
             }
     }      
