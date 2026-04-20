@@ -1,3 +1,5 @@
+import data,{getWireBankContacts} from "./data.js";
+
 export default function handler(req, res) {   
   
     const wireBankContacts = [
