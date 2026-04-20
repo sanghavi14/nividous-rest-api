@@ -1,10 +1,15 @@
-import data,{getLoanInfo} from "./data.js";
+import data,{getLoanInfo,setLoanInfo} from "./data.js";
 // api/loan.js
 export default function handler(req, res) {
     // Get loanNumber from query string (e.g., ?loanNumber=123)
-    const { loanNumber } = req.query;
+    const { loanNumber,operation,loanInfo } = req.query;
 
-    if (loanNumber === "1020304050") {
+    if (loanNumber === "1020304050" && operation == "set") {
+        //setLoanInfo(loanNumber,JSON.parse(loanInfo));
+        res.status(200).json(loanInfo);
+    }
+
+     if (loanNumber === "1020304050") {
         res.status(200).json(getLoanInfo(loanNumber));
     }
     
