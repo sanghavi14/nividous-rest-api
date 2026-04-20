@@ -52,9 +52,10 @@ export default function handler(req, res) {
       res.status(404).json({ message: "Invalid TrackingItems data" });
   else{ */
       if(operation == "set"){
-        const names = tiNames.split(",");
+        setTiData(loanNumber, tiNames);
+       /* const names = tiNames.split(",");
         for (const name of names) {
-          console.log(name.trim()); // trim removes extra spaces         
+          console.log(name.trim());          
           for (const tiRecord of tiRecords) {
             if (tiRecord.loan_number === loanNumber && tiRecord.ti_name === name) {
               tiRecord.ti_status = "Completed";  
@@ -62,7 +63,7 @@ export default function handler(req, res) {
             }
           }  
         }      
-      }
+      }*/
       const records = tiRecords.filter(r => r.loan_number === loanNumber);  
       if (records.length > 0) {
         res.status(200).json(records);
