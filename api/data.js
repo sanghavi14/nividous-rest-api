@@ -620,8 +620,7 @@ export function setWbcData(loanNumber,wbcAddressType, wbcName, wbcCity){
               wbRecord.city = wbcCity;  
               break;          
             }
-        }  
-    } 
+    }      
     return wbcRecords;
 }
 
