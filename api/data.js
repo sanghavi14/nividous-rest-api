@@ -615,16 +615,16 @@ export function getWireBankContacts(loanNumber){
 export function setWbcData(loanNumber,addressType, wbcRecordTemp){                  
             
     for (const wbcRecord of wireBankContacts) {
-        if (wbcRecord.loan_number === loanNumber && wbcRecord.address_type === wbcRecordTemp["address_type"]) {            
-            wbcRecord = wbcRecordTemp;
-            /*wbcRecord.name: "Elizabeth D. Thomas",
+        if (wbcRecord.loan_number === loanNumber) {            
+            //wbcRecord = wbcRecordTemp;
+            wbcRecord.name: "Elizabeth D. Thomas",
             wbcRecord.city: "Boston",
             wbcRecord.state: "MA",
             wbcRecord.zip_plus: "02108-5566",
             wbcRecord.short_name: "ETHOMAS",
             wbcRecord.aba_num: "11000028",
             wbcRecord.account_num: "100057898202",
-            wbcRecord.account_name: "Thomas Family Fund"*/
+            wbcRecord.account_name: "Thomas Family Fund"
             break;          
         }
     }      
