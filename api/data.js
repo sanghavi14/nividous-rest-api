@@ -613,15 +613,15 @@ export function getWireBankContacts(loanNumber){
 }
 
 export function setWbcData(loanNumber,wbcAddressType, wbcName, wbcCity){
-    const wbcRecords = getWireBankContacts(loanNumber);
-    for (const wbRecord of wbcRecords) {                  
+    const wireBanksData = getWireBankContacts(loanNumber);
+    for (const wbRecord of wireBanksData) {                  
             if (wbRecord.loan_number === loanNumber && wbRecord.address_type === wbcAddressType) {
               wbRecord.name = wbcName;  
               wbRecord.city = wbcCity;  
               break;          
             }
     }      
-    return wbcRecords;
+    return wireBankContacts;
 }
 
 export default data;
