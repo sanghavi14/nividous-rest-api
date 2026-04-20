@@ -1,4 +1,4 @@
-import data,{getWireBankContacts} from "./data.js";
+import data,{setWbcData,getWireBankContacts} from "./data.js";
 
 export default function handler(req, res) {       
    const { loanNumber,operation} = req.query;
