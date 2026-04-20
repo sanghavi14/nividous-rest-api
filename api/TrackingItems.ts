@@ -44,14 +44,23 @@ export default function handler(req, res) {
     res.status(404).json({ message: "No records found for this loan number" });
   }*/
 
-  const { loanNumber,operation,tiInfo } = req.query;
+  const { loanNumber,operation,tiNames, tiStatus } = req.query;
   if(!loanNumber || !operation)
-      return error;
-  else if(operation == "set" && !loanInfo)
-      return error;
+      res.status(404).json({ message: "Invalid LoanNumber or Operation" });     
+  else if(operation == "set" && !tiNames)
+      res.status(404).json({ message: "Invalid TrackingItems data" });
   else{
       if(operation == "set"){
-          //setLoanInfo(loanNumber,JSON.parse(loanInfo));
+        const names = tiNames.split(",");
+        for (const name of names) {
+          console.log(name.trim()); // trim removes extra spaces         
+          for (const tiRecord of tiRecords) {
+            if (tiRecord.loan_number === loanNumber && tiRecord.ti_name === name) {
+              tiRecord.ti_status = "Completed";  
+              break;          
+            }
+          }  
+        }      
       }
       const records = tiRecords.filter(r => r.loan_number === loanNumber);  
       if (records.length > 0) {
@@ -59,5 +68,5 @@ export default function handler(req, res) {
       } else {
         res.status(404).json({ message: "No records found for this loan number" });
       } 
-  }
+    }
 }
