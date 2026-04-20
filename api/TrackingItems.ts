@@ -1,4 +1,4 @@
-import data,{setTiData} from "./data.js";
+import data,{setTiData, getTrackingItemsData} from "./data.js";
 
 export default function handler(req, res) {   
   
