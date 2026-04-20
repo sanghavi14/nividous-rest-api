@@ -46,9 +46,18 @@ export function setLoanInfo(loanNumber,loanInfo){
     return data;
 }
 
-export function seTiData(loanNumber,loanInfo){
-    data[loanNumber] = loanInfo;
-    return data;
+export function setTiData(loanNumber,tiNames){
+        const names = tiNames.split(",");
+        for (const name of names) {
+          console.log(name.trim()); // trim removes extra spaces         
+          for (const tiRecord of tiRecords) {
+            if (tiRecord.loan_number === loanNumber && tiRecord.ti_name === name) {
+              tiRecord.ti_status = "Completed";  
+              break;          
+            }
+          }  
+        } 
+    return tiRecords;
 }
 
 export default data;
