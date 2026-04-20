@@ -1,6 +1,6 @@
 export default function handler(req, res) {   
 
-  const appEvents = [
+  var appEvents = [
     {
       id: 1,
       loan_number: "0100578962",
