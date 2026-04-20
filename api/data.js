@@ -612,4 +612,17 @@ export function getWireBankContacts(loanNumber){
     return records ;
 }
 
+export function setWbcData(loanNumber,wbcAddressType, wbcName, wbcCity){
+    const wbcRecords = getWireBankContacts(loanNumber);
+    for (const wbRecord of wbcRecords) {                  
+            if (wbRecord.loan_number === loanNumber && wbRecord.address_type === wbcAddressType) {
+              wbRecord.name = wbcName;  
+              wbRecord.city = wbcCity;  
+              break;          
+            }
+        }  
+    } 
+    return wbcRecords;
+}
+
 export default data;
