@@ -44,7 +44,7 @@ export default function handler(req, res) {
     res.status(404).json({ message: "No records found for this loan number" });
   }*/
 
-  const { loanNumber,operation,tiNames, tiStatus } = req.query;
+  const { loanNumber,operation,tiNames } = req.query;
   if(!loanNumber || !operation)
       res.status(404).json({ message: "Invalid LoanNumber or Operation" });     
   else if(operation == "set" && !tiNames)
