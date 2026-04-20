@@ -4,7 +4,7 @@ export default function handler(req, res) {
    const { loanNumber,operation} = req.query;
    const { wbContactBody } = req.body;   
    if(operation == "set"){
-        setWbcData(loanNumber, wbContactBody);        
+        //setWbcData(loanNumber, wbContactBody);        
    }   
    const records = getWireBankContacts(loanNumber);
    if (records.length > 0) {
