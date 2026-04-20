@@ -60,4 +60,18 @@ export function setTiData(loanNumber,tiNames){
     return tiRecords;
 }
 
+export function getTiData(loanNumber){
+        const names = tiNames.split(",");
+        for (const name of names) {
+          console.log(name.trim()); // trim removes extra spaces         
+          for (const tiRecord of tiRecords) {
+            if (tiRecord.loan_number === loanNumber && tiRecord.ti_name === name) {
+              tiRecord.ti_status = "Completed";  
+              break;          
+            }
+          }  
+        } 
+    return tiRecords;
+}
+
 export default data;
