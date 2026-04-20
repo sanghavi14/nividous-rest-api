@@ -1,9 +1,11 @@
 import data,{getWireBankContacts} from "./data.js";
 
 export default function handler(req, res) {       
-   const { loanNumber } = req.query;
-   //const loanNumber = req.params.loanNumber;            
-   //const records = wireBankContacts.filter(r => r.loan_number === loanNumber);  
+   const { loanNumber,operation,wbContact} = req.query;
+     
+   if(operation == "set"){
+        setWirebankContact(loanNumber, wbContact);        
+   }   
    const records = getWireBankContacts(loanNumber);
    if (records.length > 0) {
       res.status(200).json(records);
