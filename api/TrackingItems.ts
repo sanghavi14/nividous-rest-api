@@ -45,11 +45,11 @@ export default function handler(req, res) {
   }*/
 
   const { loanNumber,operation,tiNames } = req.query;
-  if(!loanNumber || !operation)
+  /*if(!loanNumber || !operation)
       res.status(404).json({ message: "Invalid LoanNumber or Operation" });     
   else if(operation == "set" && !tiNames)
       res.status(404).json({ message: "Invalid TrackingItems data" });
-  else{
+  else{ */
       if(operation == "set"){
         const names = tiNames.split(",");
         for (const name of names) {
@@ -68,5 +68,5 @@ export default function handler(req, res) {
       } else {
         res.status(404).json({ message: "No records found for this loan number" });
       } 
-    }
+   // }
 }
