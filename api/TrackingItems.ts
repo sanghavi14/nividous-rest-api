@@ -1,3 +1,4 @@
+import data,{setTiData} from "./data.js";
 
 export default function handler(req, res) {   
   
