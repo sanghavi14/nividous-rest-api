@@ -589,16 +589,16 @@ export function setLoanInfo(loanNumber,loanInfo){
 }
 
 export function setTiData(loanNumber,tiNames){
-        const names = tiNames.split(",");
-        for (const name of names) {
-          console.log(name.trim()); // trim removes extra spaces         
-          for (const tiRecord of tiRecords) {
+    const names = tiNames.split(",");
+    for (const name of names) {
+        console.log(name.trim());       
+        for (const tiRecord of tiRecords) {
             if (tiRecord.loan_number === loanNumber && tiRecord.ti_name === name) {
               tiRecord.ti_status = "Completed";  
               break;          
             }
-          }  
-        } 
+        }  
+    } 
     return tiRecords;
 }
 
@@ -610,6 +610,25 @@ export function getTrackingItemsData(loanNumber){
 export function getWireBankContacts(loanNumber){
     const records = wireBankContacts.filter(r => r.loan_number === loanNumber);      
     return records ;
+}
+
+export function setWbcData(loanNumber,addressType, wbcRecordTemp){                  
+            
+    for (const wbcRecord of wireBankContacts) {
+        if (wbcRecord.loan_number === loanNumber && wbcRecord.address_type === wbcRecordTemp["address_type"]) {            
+            wbcRecord = wbcRecordTemp;
+            /*wbcRecord.name: "Elizabeth D. Thomas",
+            wbcRecord.city: "Boston",
+            wbcRecord.state: "MA",
+            wbcRecord.zip_plus: "02108-5566",
+            wbcRecord.short_name: "ETHOMAS",
+            wbcRecord.aba_num: "11000028",
+            wbcRecord.account_num: "100057898202",
+            wbcRecord.account_name: "Thomas Family Fund"*/
+            break;          
+        }
+    }      
+    return wireBankContacts;
 }
 
 export default data;
