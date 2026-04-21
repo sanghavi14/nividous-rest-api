@@ -632,7 +632,7 @@ export function setWbcData(loanNumber,wbcAddressType, wbcName, wbcCity, state, s
 }
 
 export function setTrackingItemData(loanNum,tiName, tiStatus, dueDate, hasExcp, priorTo){       
-    const tiDataSet = getTrackingItemsData(loanNumber);
+    const tiDataSet = getTrackingItemsData(loanNum);
     for (const tiData of tiDataSet) {                  
             if (tiData.loan_number === loanNum && tiData.ti_name === tiName) {
               tiRecord.ti_status = tiStatus;  
