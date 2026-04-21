@@ -36,7 +36,7 @@ export default function handler(req, res) {
     { id: "t29", loan_number: "0100578919", ti_name: "Payoff Shortage", ti_status: "In Process", prior_to: "Funded-Funds Disbured", due_date: "17-02-2026", has_exception: "yes" }
   ];
   
-  const { operation} = req.query;  
+  const { loanNumber, operation} = req.query;  
   // Get all records for this loan
   if(operation == "set"){
       const { loanNumber, tiNames} = req.query; 
