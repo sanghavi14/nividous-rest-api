@@ -631,23 +631,18 @@ export function setWbcData(loanNumber,wbcAddressType, wbcName, wbcCity, state, s
     return wireBankContacts;
 }
 
-export function setTrackingItemData(loanNumber,wbcAddressType, wbcName, wbcCity, state, shortName, abaNum, acctNum, zipPlus, acctName){    
-    const wireBanksData = getWireBankContacts(loanNumber);
-    for (const wbRecord of wireBanksData) {                  
-            if (wbRecord.loan_number === loanNumber && wbRecord.address_type === wbcAddressType) {
-              wbRecord.name = wbcName;  
-              wbRecord.city = wbcCity;  
-              wbRecord.state = state;
-              wbRecord.short_name = shortName;
-              wbRecord.aba_num = abaNum;
-              wbRecord.account_num = acctNum;
-              wbRecord.zip_plus = zipPlus;
-              wbRecord.account_name = acctName;
-                
+export function setTrackingItemData(loanNum,tiName, tiStatus, dueDate, hasExcp, priorTo){       
+    const tiDataSet = getTrackingItemsData(loanNumber);
+    for (const tiData of tiDataSet) {                  
+            if (tiData.loan_number === loanNum && tiData.ti_name === tiName) {
+              tiRecord.ti_status = tiStatus;  
+              tiData.due_date = dueDate;  
+              tiData.prior_to = priorTo;
+              tiData.has_exception = hasExcp;                            
               break;          
             }
     }      
-    return wireBankContacts;
+    return tiRecords;
 }
 
 export default data;
