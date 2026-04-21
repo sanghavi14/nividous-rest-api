@@ -635,7 +635,7 @@ export function setTrackingItemData(loanNum,tiName, tiStatus, dueDate, hasExcp, 
     const tiDataSet = getTrackingItemsData(loanNum);
     for (const tiData of tiDataSet) {                  
             if (tiData.loan_number === loanNum && tiData.ti_name === tiName) {
-              tiRecord.ti_status = tiStatus;  
+              tiData.ti_status = tiStatus;  
               tiData.due_date = dueDate;  
               tiData.prior_to = priorTo;
               tiData.has_exception = hasExcp;                            
