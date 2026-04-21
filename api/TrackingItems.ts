@@ -39,7 +39,7 @@ export default function handler(req, res) {
   const { loanNumber,operation,tiNames, } = req.query;  
   // Get all records for this loan
   if(operation == "set"){
-        setTiData(loanNumber, tiNames);        
+        setTiStatus(loanNumber, tiNames);        
   }
 
   if(operation == "update"){    
