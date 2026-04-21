@@ -42,12 +42,12 @@ export default function handler(req, res) {
         setTiData(loanNumber, tiNames);        
   }
 
-  if(operation == "update"){   
+  if(operation == "update"){    
        const { loanNumber,operation,tiName, tiStatus,dueDate,hasExcp,priorTo} = req.query; 
        setTrackingItemData(loanNumber,tiName,tiStatus,dueDate,hasExcp,priorTo);        
   }
   //const records = tiRecords.filter(r => r.loan_number === loanNumber);  
-   const records = getTrackingItemsData(loanNumber);
+  const records = getTrackingItemsData(loanNumber);
   if (records.length > 0) {
     res.status(200).json(records);
   } else {
