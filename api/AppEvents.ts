@@ -6,7 +6,7 @@ export default function handler(req, res) {
       loan_number: "0100578962",
       Event_Name: "BorrowerRequested NewLoanAmt",
       Event_Type: "Re-Disclosure CD",
-      Event_Status: "Completed",
+      Event_Status: "Pending",
       Event_DateTime: "07/30/2021 17:15:29",
       Event_Reason: "Borrower Requested New Loan Amount"
     },
@@ -34,7 +34,7 @@ export default function handler(req, res) {
       Event_Name: "Rerun ComplAnalyzer",
       Event_Type: "ComplianceAnalyzer",
       Event_Status: "Completed",
-      Event_DateTime: "08-10-2021 07:47",
+      Event_DateTime: "08/10/2021 07:47",
       Event_Reason: "Finance Charge Changed"
     },
     {
@@ -43,7 +43,7 @@ export default function handler(req, res) {
       Event_Name: "Update APR",
       Event_Type: "APR",
       Event_Status: "Completed",
-      Event_DateTime: "09-07-2021 02:09",
+      Event_DateTime: "09/07/2021 02:09",
       Event_Reason: "ReCalculate APR"
     },
   
@@ -80,7 +80,7 @@ export default function handler(req, res) {
       Event_Name: "Rerun ComplAnalyzer",
       Event_Type: "ComplianceAnalyzer",
       Event_Status: "Completed",
-      Event_DateTime: "08-10-2021 07:47",
+      Event_DateTime: "08/10/2021 07:47",
       Event_Reason: "Finance Charge Changed"
     },
     {
@@ -89,7 +89,7 @@ export default function handler(req, res) {
       Event_Name: "Update APR",
       Event_Type: "APR",
       Event_Status: "Completed",
-      Event_DateTime: "09-07-2021 02:09",
+      Event_DateTime: "09/07/2021 02:09",
       Event_Reason: "ReCalculate APR"
     },
   
@@ -126,7 +126,7 @@ export default function handler(req, res) {
       Event_Name: "Rerun ComplAnalyzer",
       Event_Type: "ComplianceAnalyzer",
       Event_Status: "Completed",
-      Event_DateTime: "08-10-2021 07:47",
+      Event_DateTime: "08/10/2021 07:47",
       Event_Reason: "Finance Charge Changed"
     },
     {
@@ -135,7 +135,7 @@ export default function handler(req, res) {
       Event_Name: "Update APR",
       Event_Type: "APR",
       Event_Status: "Completed",
-      Event_DateTime: "09-07-2021 02:09",
+      Event_DateTime: "09/07/2021 02:09",
       Event_Reason: "ReCalculate APR"
     },
   
@@ -172,7 +172,7 @@ export default function handler(req, res) {
       Event_Name: "Rerun ComplAnalyzer",
       Event_Type: "ComplianceAnalyzer",
       Event_Status: "Completed",
-      Event_DateTime: "08-10-2021 07:47",
+      Event_DateTime: "08/10/2021 07:47",
       Event_Reason: "Finance Charge Changed"
     },
     {
@@ -181,7 +181,7 @@ export default function handler(req, res) {
       Event_Name: "Update APR",
       Event_Type: "APR",
       Event_Status: "Completed",
-      Event_DateTime: "09-07-2021 02:09",
+      Event_DateTime: "09/07/2021 02:09",
       Event_Reason: "ReCalculate APR"
     },
   
@@ -218,7 +218,7 @@ export default function handler(req, res) {
       Event_Name: "Rerun ComplAnalyzer",
       Event_Type: "ComplianceAnalyzer",
       Event_Status: "Completed",
-      Event_DateTime: "08-10-2021 07:47",
+      Event_DateTime: "08/10/2021 07:47",
       Event_Reason: "Finance Charge Changed"
     },
     {
@@ -227,7 +227,7 @@ export default function handler(req, res) {
       Event_Name: "Update APR",
       Event_Type: "APR",
       Event_Status: "Completed",
-      Event_DateTime: "09-07-2021 02:09",
+      Event_DateTime: "09/07/2021 02:09",
       Event_Reason: "ReCalculate APR"
     },
   
@@ -264,7 +264,7 @@ export default function handler(req, res) {
       Event_Name: "Rerun ComplAnalyzer",
       Event_Type: "ComplianceAnalyzer",
       Event_Status: "Completed",
-      Event_DateTime: "08-10-2021 07:47",
+      Event_DateTime: "08/10/2021 07:47",
       Event_Reason: "Finance Charge Changed"
     },
     {
@@ -273,7 +273,7 @@ export default function handler(req, res) {
       Event_Name: "Update APR",
       Event_Type: "APR",
       Event_Status: "Completed",
-      Event_DateTime: "09-07-2021 02:09",
+      Event_DateTime: "09/07/2021 02:09",
       Event_Reason: "ReCalculate APR"
     },
   
@@ -310,7 +310,7 @@ export default function handler(req, res) {
       Event_Name: "Rerun ComplAnalyzer",
       Event_Type: "ComplianceAnalyzer",
       Event_Status: "Completed",
-      Event_DateTime: "08-10-2021 07:47",
+      Event_DateTime: "08/10/2021 07:47",
       Event_Reason: "Finance Charge Changed"
     },
     {
@@ -319,7 +319,7 @@ export default function handler(req, res) {
       Event_Name: "Update APR",
       Event_Type: "APR",
       Event_Status: "Completed",
-      Event_DateTime: "09-07-2021 02:09",
+      Event_DateTime: "09/07/2021 02:09",
       Event_Reason: "ReCalculate APR"
     },
   
@@ -356,7 +356,7 @@ export default function handler(req, res) {
       Event_Name: "Rerun ComplAnalyzer",
       Event_Type: "ComplianceAnalyzer",
       Event_Status: "Completed",
-      Event_DateTime: "08-10-2021 07:47",
+      Event_DateTime: "08/10/2021 07:47",
       Event_Reason: "Finance Charge Changed"
     },
     {
@@ -365,7 +365,7 @@ export default function handler(req, res) {
       Event_Name: "Update APR",
       Event_Type: "APR",
       Event_Status: "Completed",
-      Event_DateTime: "09-07-2021 02:09",
+      Event_DateTime: "09/07/2021 02:09",
       Event_Reason: "ReCalculate APR"
     }
   ];
