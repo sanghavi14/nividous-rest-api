@@ -8,8 +8,8 @@ export default function handler(req, res) {
               loan_amount: 199999,
               loan_status: "Approved",
               borrower_name: "John Anderson Jack Rose",
-              interest_rate: 6.45,
-              property_address: "19 Lakeview Dr, Austin, TX, USA",
+              interest_rate: 9.45,
+              property_address: "29 Lakeview Dr, Austin, TX, USA",
               property_type: "Single Family",
               occupancy: "Owner-Occupied",
               support_center: "SC2",
@@ -22,9 +22,9 @@ export default function handler(req, res) {
               loan_purpose: "Purchase",
               funding_rework_ti: "No",
               payofff_shortage_ti: "No",
-              schl_closing_date: "2026-01-11",
-              schl_disb_date: "2026-01-19",
-              first_payment_date: "2026-03-29"
+              schl_closing_date: "2026-01-01",
+              schl_disb_date: "2026-02-02",
+              first_payment_date: "2026-03-03"
             },
             {
               id: "L2",
