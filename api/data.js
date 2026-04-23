@@ -550,32 +550,6 @@ var tiRecords = [
         aba_num: "11002011",
         account_num: "100057891902",
         account_name: "Foster Family Trust"
-      },
-      {
-        id: 39,
-        loan_number: "0100578919",
-        address_type: "Wire Revision Bank",
-        name: "Oliver J. Gray",
-        city: "Denver",
-        state: "CO",
-        zip_plus: "80202-1919",
-        short_name: "OGRAY",
-        aba_num: "12302012",
-        account_num: "100057891903",
-        account_name: "Gray Enterprises"
-      },
-      {
-        id: 40,
-        loan_number: "0100578919",
-        address_type: "Wire Revision Bank-Final",
-        name: "Isabella R. Hughes",
-        city: "Seattle",
-        state: "WA",
-        zip_plus: "98109-2020",
-        short_name: "IHUGHES",
-        aba_num: "32502013",
-        account_num: "100057891904",
-        account_name: "Hughes Family Fund"
       }
     ];
 
