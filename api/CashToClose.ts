@@ -126,7 +126,7 @@ export default function handler(req, res) {
   
     const { loanNumber } = req.query;  
     // Get all cashToCloserRecords for this loan
-    const records = cashToCloserRecords.filter(r => r.loan_num === loanNumber);  
+    const records = cashToCloserRecords.filter(r => r.loan_number === loanNumber);  
     if (records.length > 0) {
       res.status(200).json(records);
     } else {
